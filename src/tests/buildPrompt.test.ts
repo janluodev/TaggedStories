@@ -183,7 +183,12 @@ describe('buildPrompt', () => {
     expect(prompt).toContain('你的身份是一名资深职业编剧');
     expect(prompt).toContain('亚里士多德戏剧理论、三幕式结构');
     expect(prompt).toContain('Who——谁人');
-    expect(prompt).toContain('输出一篇1000—1500字的中文故事梗概');
+    expect(prompt).toContain('输出一篇不低于5000字的中文故事梗概');
+    expect(prompt).toContain('150章');
+    expect(prompt).toContain('5~6名核心配角');
+    expect(prompt).toContain('按卷进行故事结构');
+    expect(prompt).not.toContain('1000—1500字');
+    expect(prompt).not.toContain('1000-1500');
   });
 
   // 10. 每个占位符均被完全替换
